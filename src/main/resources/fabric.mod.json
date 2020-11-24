@@ -1,35 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fabromatic",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Fabro-matic",
+  "description": "A Vanilla-friendly automation mod.",
   "authors": [
-    "Me!"
+    "DrInsomniac_"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/wmboeckman/fabric-o-matic"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/fabromatic/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.wmboeckman.fabromatic.FabromaticMain"
+    ],
+    "client": [
+      "com.wmboeckman.fabromatic.FabromaticClient"
+    ],
+    "modmenu": [
+      "com.wmboeckman.fabromatic.ModMenuImpl"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "fabromatic.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": ">=1.16.2"
   },
   "suggests": {
     "another-mod": "*"
